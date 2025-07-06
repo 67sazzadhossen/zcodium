@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "@/assests/zcodium_logo_coloured.png";
+import logo from "@/assests/zcodium_logo_blue.png";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
     // },
   ];
   return (
-    <div className=" flex items-center justify-between px-16 py-4 fixed w-full max-w-[90%] left-1/2 -translate-x-1/2 backdrop-blur-3xl">
+    <div className=" flex items-center justify-between px-16 py-4 fixed w-full max-w-[90%] left-1/2 -translate-x-1/2 backdrop-blur-3xl z-50 rounded-full mt-1  bg-[rgba(255,255,255,0.7)] shadow-xl">
       {/* logo */}
       <div>
         <Image src={logo} alt="logo" width={120} height={80} />
@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="flex items-center gap-24 ">
         {navItems.map((item, idx) => (
           <Link
-            className="uppercase text-sm bg-gradient-to-r from-blue-700 to-purple-800 bg-clip-text text-transparent group relative " /* 'group' ক্লাস যোগ করা হয়েছে এবং 'relative' পজিশন আন্ডারলাইনের জন্য */
+            className="uppercase text-sm bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-transparent group relative " /* 'group' ক্লাস যোগ করা হয়েছে এবং 'relative' পজিশন আন্ডারলাইনের জন্য */
             key={idx}
             href={item.link}
           >
